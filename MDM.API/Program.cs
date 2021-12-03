@@ -1,4 +1,5 @@
 using MDM.Application;
+using MDM.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapGet("/documents", (IDocumentService documentsService) => documentsService.GetDocuments());
+app.MapPost("/documents", async (CreateDocumentRequest request, IDocumentService documentsService) => await documentsService.CreateDocument(request));
 app.MapGet("/documents/container", (IDocumentContainerService documentContainerService) => documentContainerService.GetDocumentContainer());
 app.MapGet("/documents/container/types", (IDocumentContainerService documentContainerService) => documentContainerService.GetContainerTypes());
 

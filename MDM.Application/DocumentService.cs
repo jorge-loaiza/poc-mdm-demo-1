@@ -4,6 +4,24 @@ namespace MDM.Application
 {
     public class DocumentService : IDocumentService
     {
+        public async Task<Document> CreateDocument(CreateDocumentRequest request)
+        {
+            // Validate request
+
+            // Create Document
+            var document = request;
+
+            // Create Document Properties
+            var documentProperties = request.DocumentProperties;
+
+            // Save changes
+
+            // Publish creation
+
+            // Return created object
+            return document;
+        }
+
         public IEnumerable<Document> GetDocuments()
         {
             return new List<Document>()
