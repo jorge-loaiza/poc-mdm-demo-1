@@ -10,6 +10,8 @@
 
         public string Source { get; set; }
 
-        ICollection<DocumentProperty> Properties { get; set; }
+        public DateTimeOffset PostedDate { get; set; }
+
+        public ICollection<DocumentPropertyValue>? DocumentProperties { get; set; }
     }
 }

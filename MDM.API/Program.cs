@@ -7,7 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IDocumentsService, DocumentsService>();
+builder.Services.AddTransient<IDocumentService, DocumentService>();
+builder.Services.AddTransient<IDocumentContainerService, DocumentContainerService>();
 
 var app = builder.Build();
 
@@ -20,9 +21,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/documents", (IDocumentsService documentsService) =>
-{
-    return documentsService.GetDocuments();
-});
+app.MapGet("/documents", (IDocumentService documentsService) => documentsService.GetDocuments());
+app.MapGet("/documents/container", (IDocumentContainerService documentContainerService) => documentContainerService.GetDocumentContainer());
+app.MapGet("/documents/container/types", (IDocumentContainerService documentContainerService) => documentContainerService.GetContainerTypes());
+
 
 app.Run();

@@ -2,6 +2,8 @@
 {
     public enum DocumentPropertyType
     {
-        STRING = 1
+        String = 1,
+        DateTime = 2,
+        Boolean = 3
     }
 }

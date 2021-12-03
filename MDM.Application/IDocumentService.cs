@@ -2,7 +2,7 @@
 
 namespace MDM.Application
 {
-    public interface IDocumentsService
+    public interface IDocumentService
     {
         IEnumerable<Document> GetDocuments();
     }
