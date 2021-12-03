@@ -31,6 +31,12 @@ namespace MDM.Application
                     PropertyId = new Guid("776CA162-2EE6-4D55-83E8-609C22D5FBF2"),
                     Name = "DOCUMENT_PROPERTY_SOLICITATION_NUMBER",
                     DocumentPropertyType = DocumentPropertyType.String
+                },
+                new DocumentProperty()
+                {
+                    PropertyId = new Guid("5D10EA35-002E-41F5-88EF-9516F20A97B5"),
+                    Name = "DOCUMENT_PROPERTY_MAIN_POC",
+                    DocumentPropertyType = DocumentPropertyType.String
                 }
             };
         }

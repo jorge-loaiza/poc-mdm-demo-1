@@ -13,5 +13,7 @@
         public DateTimeOffset PostedDate { get; set; }
 
         public ICollection<DocumentPropertyValue>? DocumentProperties { get; set; }
+
+        public IDictionary<string, string> ExternalURLs { get; set; }
     }
 }

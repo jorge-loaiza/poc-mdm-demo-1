@@ -19,7 +19,7 @@ namespace MDM.Application
             // Publish creation
 
             // Return created object
-            return (CreateDocumentResponse) document;
+            return (CreateDocumentResponse)document;
         }
 
         public IEnumerable<Document> GetDocuments(string query = null)
@@ -46,7 +46,18 @@ namespace MDM.Application
                             DocumentId = GetDocumentGuid1(),
                             DocumentPropertyId = new Guid("87262B42-2639-4EDD-95F7-DD5F933085B1"),
                             Value = Boolean.TrueString
+                        },
+                        new DocumentPropertyValue()
+                        {
+                            DocumentId= GetDocumentGuid1(),
+                            DocumentPropertyId = new Guid("5D10EA35-002E-41F5-88EF-9516F20A97B5"),
+                            Value = "email@test"
                         }
+                    },
+                    ExternalURLs = new Dictionary<string, string>()
+                    {
+                        { "link", "https://www.linktest.io" },
+                        { "link2", "https://www.linktest2.io" }
                     }
                 },
                 new Document() {
@@ -76,6 +87,11 @@ namespace MDM.Application
                             DocumentPropertyId = new Guid("87262B42-2639-4EDD-95F7-DD5F933085B1"),
                             Value = Boolean.TrueString
                         }
+                    },
+                    ExternalURLs = new Dictionary<string, string>()
+                    {
+                        { "link", "https://www.linktest.io" },
+                        { "link2", "https://www.linktest2.io" }
                     }
                 }
             };
