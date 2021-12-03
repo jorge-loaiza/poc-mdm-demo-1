@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDM.Domain", "MDM.Domain\MDM.Domain.csproj", "{7A0A1747-5076-4090-9EDA-85A73F9AF443}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDM.API", "MDM.API\MDM.API.csproj", "{C63BDEA1-5540-4F71-896D-5C501A64E3B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDM.Application", "MDM.Application\MDM.Application.csproj", "{FBDA4957-3D2B-4DDA-9B27-88C4F4AED628}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7A0A1747-5076-4090-9EDA-85A73F9AF443}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A0A1747-5076-4090-9EDA-85A73F9AF443}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A0A1747-5076-4090-9EDA-85A73F9AF443}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63BDEA1-5540-4F71-896D-5C501A64E3B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63BDEA1-5540-4F71-896D-5C501A64E3B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63BDEA1-5540-4F71-896D-5C501A64E3B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63BDEA1-5540-4F71-896D-5C501A64E3B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBDA4957-3D2B-4DDA-9B27-88C4F4AED628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDA4957-3D2B-4DDA-9B27-88C4F4AED628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDA4957-3D2B-4DDA-9B27-88C4F4AED628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDA4957-3D2B-4DDA-9B27-88C4F4AED628}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
