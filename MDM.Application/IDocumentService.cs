@@ -4,8 +4,8 @@ namespace MDM.Application
 {
     public interface IDocumentService
     {
-        Task<Document> CreateDocument(CreateDocumentRequest request);
+        Task<CreateDocumentResponse> CreateDocument(CreateDocumentRequest request);
 
-        IEnumerable<Document> GetDocuments();
+        IEnumerable<Document> GetDocuments(string query = null);
     }
 }

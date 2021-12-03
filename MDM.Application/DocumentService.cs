@@ -4,12 +4,12 @@ namespace MDM.Application
 {
     public class DocumentService : IDocumentService
     {
-        public async Task<Document> CreateDocument(CreateDocumentRequest request)
+        public async Task<CreateDocumentResponse> CreateDocument(CreateDocumentRequest request)
         {
             // Validate request
 
             // Create Document
-            var document = request;
+            Document document = request;
 
             // Create Document Properties
             var documentProperties = request.DocumentProperties;
@@ -19,12 +19,12 @@ namespace MDM.Application
             // Publish creation
 
             // Return created object
-            return document;
+            return (CreateDocumentResponse) document;
         }
 
-        public IEnumerable<Document> GetDocuments()
+        public IEnumerable<Document> GetDocuments(string query = null)
         {
-            return new List<Document>()
+            var documents = new List<Document>()
             {
                 new Document() {
                     DocumentId = GetDocumentGuid1(),
@@ -79,6 +79,16 @@ namespace MDM.Application
                     }
                 }
             };
+
+            if (!string.IsNullOrEmpty(query))
+            {
+                return documents.Where(d =>
+                {
+                    return d.DocumentProperties != null && d.DocumentProperties.Any(p => p.Value.Contains(query, StringComparison.OrdinalIgnoreCase));
+                });
+            }
+
+            return documents;
         }
 
         private static Guid GetDocumentGuid1()

@@ -1,6 +1,6 @@
 ﻿namespace MDM.Domain
 {
-    public class Document : Auditable
+    public class Document : AuditableEntity
     {
         public Guid DocumentId { get; set; }
 

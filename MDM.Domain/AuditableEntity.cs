@@ -1,6 +1,6 @@
 ﻿namespace MDM.Domain
 {
-    public abstract class Auditable
+    public abstract class AuditableEntity
     {
         public DateTimeOffset CreatedDate { get; set; }
 
